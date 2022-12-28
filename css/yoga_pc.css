@@ -1,0 +1,251 @@
+*{
+    margin:0; padding:0;
+}
+ul,ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    display: block;
+}
+
+html,body{
+    height:100%;
+}
+
+
+header, section, footer{
+    width:100%;
+    position:relative;
+}
+@media screen and (min-width:1200px) {
+
+ header{
+    padding:20px;
+    box-sizing: border-box;
+    background:rgba(0,0,0,0.5);
+    position:fixed;
+    z-index: 10;
+ }
+
+header nav{
+    width:90%;
+    /* height:50px; */
+    margin:0 auto;
+    /* border:1px solid white; */
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav input{
+    display: none;
+}
+
+header nav label{
+    display: none;
+}
+
+header nav h1{
+    width:20%;
+}
+header nav h1 a img{
+    width:200px;
+}
+
+header nav ul.main_menu{
+    width:70%;
+    height:30px;
+    /* border:1px solid red; */
+
+    display: flex;
+}
+
+header nav ul.main_menu>li{
+    width:14%;
+    text-align: center;
+    line-height: 30px;
+}
+
+header nav ul.main_menu>li a{
+    font-size: 15px;
+    font-weight: bold;
+    color:white;
+}
+
+header nav ul.main_menu>li .sub_menu{
+    margin-top:22px;
+    display: none;
+}
+
+header nav ul.main_menu>li .sub_menu li{
+    line-height: 25px;
+}
+
+
+
+
+
+
+
+    
+
+/*bx-slider디자인 시작*/
+
+#visual{
+    height:100% !important;
+}
+
+/*bxslider디자인시 반드시 작성*/
+
+.bx-wrapper, .bx-viewport{
+
+    position:relative;
+    width:100vw;
+    height:100vh;
+    top:0;
+    left:0;
+}
+
+#visual .slidebox{
+    width:100vw;
+    position:relative;
+    height:100vh !important;
+}
+#visual .slidebox .bx .img1{
+    background:url(../images/visual01_01.png) no-repeat center;
+    background-size: cover;
+    width:100vw;
+    height:100vh !important;
+
+}
+
+#visual .slidebox .bx .img2{
+    background:url(../images/visual02_01.png) no-repeat center;
+    background-size: cover;
+    width:100vw;
+    height:100vh !important;
+
+}
+
+
+/*about*/
+
+#about{
+    width:100%;
+    height:900px;
+    background: url(../images/bg_about.png) no-repeat center;
+    border:1px solid red;
+}
+
+#about h2{
+    width:120px;
+    height:30px;
+    /* background-color: yellow; */
+    text-align: center;
+    position: absolute;
+    left:0; 
+    right:0;
+    top:210px;
+    margin:auto;
+}
+
+#about .txt{
+    width:50%;
+    padding:30px;
+
+    position:absolute;
+    top:400px;
+    left:0;
+    right:0;
+    margin:auto;
+    text-align: center;
+}
+
+#about .txt h3{}
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
