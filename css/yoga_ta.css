@@ -23,7 +23,7 @@ header, section, footer{
     position:relative;
   }  
 
-@media screen and (min-width:1200px) {
+@media all and (min-width:768px) and (max-width:1199px) {
 
     header{
         padding:20px;
@@ -31,28 +31,64 @@ header, section, footer{
         background-color: rgba(0,0,0,0.5);
         z-index: 10;
         position:fixed;
-    }
-
-    .fixed{    
-        position:fixed;
-     }
+    }   
+ .fixed{    
+    position:fixed;
+ }
 
 header nav{
     width:90%;
+    /* height:50px; */
     margin:0 auto;
     /* border:1px solid white; */
 
+
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
 }
 
 header nav input{
     display: none;
+    position:absolute;
+    right:10%;
+    top:0;
+    bottom:0;
+    margin:auto;
 }
 
-header nav label{
-    display: none;
+header nav .toggle_btn{
+    /* display: block; */
+    width:50px;
+    height:50px;
+    /* border:1px solid white; */
+    position:relative;
+}
+
+header nav .toggle_btn span{
+    display: block;
+    width:30px;
+    height:4px;
+    background-color: #fff;
+
+    position:absolute;
+    margin:0 10px;
+
+}
+header nav .toggle_btn .t_stick{
+    top:11px;
+}
+
+.toggle_btn .m_stick{
+    top:22px;
+}
+
+.toggle_btn .b_stick{
+    top:33px;
+}
+
+#ham_menu:checked~.main_menu{
+    left:0;
 }
 
 header nav h1{
@@ -63,15 +99,21 @@ header nav h1 a img{
 }
 
 header nav ul.main_menu{
-    width:70%;
-    /* height:30px; */
+    width:100%;
+    height:800px;
     /* border:1px solid red; */
+    /* display: flex; */
 
-    display: flex;
+    position:absolute;
+    top:100px;
+    left:100%;
+    background:rgba(0,0,0,0.7);
+
+    transition:all 0.5s;
 }
 
 header nav ul.main_menu>li{
-    width:14%;
+    width:100%;
     text-align: center;
     line-height: 30px;
 }
@@ -102,7 +144,7 @@ header nav ul.main_menu>li .sub_menu li{
 /*bx-slider디자인 시작*/
 
 #visual{
-    position: relative;
+    width:100%;
     height:100% !important;
 }
 
@@ -112,7 +154,7 @@ header nav ul.main_menu>li .sub_menu li{
 
     position:relative;
     width:100%;
-    height:100vh;
+    height:100%;
     top:0;
     left:0;
 }
@@ -245,7 +287,7 @@ header nav ul.main_menu>li .sub_menu li{
 
 }
 #program ul{
-    width:90%;
+    width:100%;
     height:500px;
     margin:0 auto;
 
@@ -268,7 +310,7 @@ header nav ul.main_menu>li .sub_menu li{
     right:0;
     margin:auto;
     color:white;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bold;
 }
 
@@ -281,10 +323,11 @@ header nav ul.main_menu>li .sub_menu li{
     top:100%;
     left:0;
 
-    padding:150px 50px 50px;
+    padding:150px 20px 50px;
     box-sizing: border-box;
     line-height: 2;
     color:white;
+    font-size: 13px;
 
     
 
@@ -316,8 +359,8 @@ header nav ul.main_menu>li .sub_menu li{
 }
 
 #program ul li:nth-child(1) .icon_img{
-    width:120px;
-    height:120px;
+    width:80px;
+    height:80px;
     background:url(../images/program01.png) no-repeat left center ;
     background-size: cover;
     /* border:1px solid red; */
@@ -329,8 +372,8 @@ header nav ul.main_menu>li .sub_menu li{
     margin:auto;
 }
 #program ul li:nth-child(2) .icon_img{
-    width:120px;
-    height:120px;
+    width:80px;
+    height:80px;
     background:url(../images/program02.png) no-repeat left center ;
     background-size: cover;
     /* border:1px solid red; */
@@ -343,8 +386,8 @@ header nav ul.main_menu>li .sub_menu li{
 }
 
 #program ul li:nth-child(3) .icon_img{
-    width:120px;
-    height:120px;
+    width:80px;
+    height:80px;
     background:url(../images/program03.png) no-repeat left center ;
     background-size: cover;
     /* border:1px solid red; */
@@ -357,8 +400,8 @@ header nav ul.main_menu>li .sub_menu li{
 }
 
 #program ul li:nth-child(4) .icon_img{
-    width:120px;
-    height:120px;
+    width:80px;
+    height:80px;
     background:url(../images/program04.png) no-repeat left center ;
     background-size: cover;
     /* border:1px solid red; */
@@ -372,8 +415,8 @@ header nav ul.main_menu>li .sub_menu li{
 
 
 #program ul li:nth-child(5) .icon_img{
-    width:120px;
-    height:120px;
+    width:80px;
+    height:80px;
     background:url(../images/program05.png) no-repeat left center ;
     background-size: cover;
     /* border:1px solid red; */
@@ -417,7 +460,11 @@ header nav ul.main_menu>li .sub_menu li{
 
 #lesson .on{
     opacity: 1;
-    top:200px;
+    top:150px;
+}
+
+#lesson figure img{
+    width:100%;
 }
 
 #lesson figure figcaption{
@@ -430,7 +477,7 @@ header nav ul.main_menu>li .sub_menu li{
 }
 
 #lesson figure figcaption ul{
-    width:20%;
+    width:70%;
     margin:20px auto;
     /* border:1px solid red; */
 }
@@ -443,11 +490,12 @@ header nav ul.main_menu>li .sub_menu li{
 }
 #lesson figure figcaption ul li a{
     color:#333;
+    font-size: 14px;
 }
 
 #teacher{
     width:100%;
-    height:600px;
+    height:700px;
     background:url(../images/bg_teacher.png) no-repeat center;
 
     /* border:1px solid red; */
@@ -465,10 +513,11 @@ header nav ul.main_menu>li .sub_menu li{
     margin:50px auto;
 
     display: flex;
+    flex-flow: row wrap;
 }
 #teacher ul li{
-    width:16.66%;
-    height:250px;
+    width:33.33%;
+    height:200px;
     position:relative;
     overflow: hidden;
 }
@@ -548,49 +597,49 @@ header nav ul.main_menu>li .sub_menu li{
 
 #fc .gallery{
     width:90%;
-    margin:30px auto;
+    margin:0px auto;
     /* border:1px solid red; */
 
     position:relative;
-    top:100px;
+    top:50px;
 
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-around;
 }
 
 #fc .gallery div{
-    width:55%;
-    height:650px;
+    width:90%;
+    height:480px;
 }
 #fc .gallery div img{
     width:100%;
 }
 
 #fc .gallery ul{
-    width:30%;
-    height:650px;
+    width:90%;
+    height:250px;
 
     display: flex;
     flex-flow: row wrap;
-
 }
 
 #fc .gallery ul li{
-    width:40%;
-    margin:2%;
+    width:20%;
+    margin:0.5%;
 }
 #fc .gallery ul li a img{
     width:100%;
 }
 #fc .gallery ul li.fc_more{
-    width:40%;
-    height:130px;
-    border-radius: 50px;
+    width:20%;
+    height:90px;
+    border-radius: 30px;
     background-color:lightskyblue;
     text-align: center;
 }
 #fc .gallery ul li.fc_more a{
-    font-size: 18px;
+    font-size: 14px;
     font-weight: bold;
     color:#333;
     padding-top:20px;
@@ -599,7 +648,7 @@ header nav ul.main_menu>li .sub_menu li{
 #fc .gallery ul li.fc_more span{
     display: block;
     width:60px;
-    margin:10px auto;
+    margin:0px auto;
     height: 30px;
     line-height: 30px;
     border-radius: 15px;
@@ -618,7 +667,7 @@ header nav ul.main_menu>li .sub_menu li{
 
 footer{
     width:100%;
-    height:400px;
+    height:350px;
     background-color: #333;
 }
 
@@ -635,13 +684,21 @@ footer .center .f_left{
 }
 
 footer .center .f_left h2 {
-    width:90%;
+    width:250px;
+}
+footer .center .f_left h2 a{
+    display: block;
+    width:100%;
+}
+footer .center .f_left h2 a img{
+    width:100%;
 }
 
 footer .center .f_left p{
     padding:50px 0;
     color:white;
     line-height: 2;
+    font-size: 13px;
 }
 
 footer .center .f_left h2 a img{
@@ -649,9 +706,9 @@ footer .center .f_left h2 a img{
 }
 
 footer .center .f_left .sns{
-    width:60%;
+    width:80%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 
@@ -661,13 +718,14 @@ footer .center .f_left .sns{
 
 
 footer .center .f_right{
-    width:70%;
-    padding:30px 0;
+    width:75%;
+    padding:30px 0 0 20px;
 }
 
 footer .center .f_right ul.menu1{
     width:100%;
     line-height: 25px;
+    border-bottom:1px solid #fff;
 
     display: flex;
 }
@@ -676,30 +734,38 @@ footer .center .f_right ul.menu1 li a{
     font-size: 14px;
     color:white;
     font-weight: bold;
-    padding: 10px 20px;
+    padding: 0px 20px 10px;
     box-sizing: border-box;
 }
 
 footer .center .f_right ul.menu2{
     width:100%;
+    margin-top:20px;
 
+    /* border:1px solid white; */
     display: flex;
+}
+footer .center .f_right ul.menu2 li{
+    width:20%;
+}
+footer .center .f_right ul.menu2 li img{
+    width:100%;
 }
 
 footer .center .f_right ul.menu2 li h2{
-    font-size: 15px;
+    font-size: 12px;
     color:white;
 }
 footer .center .f_right ul.menu2 li a{
     color:white;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 2;
 }
 
 footer .center .f_right p{
     padding:20px 0;
     color:white;
-    font-size: 15px;
+    font-size: 12px;
     letter-spacing: 1px;
 }
 
